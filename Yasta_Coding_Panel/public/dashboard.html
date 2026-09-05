@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Yasta_Coding Panel</title>
+  <link rel="stylesheet" href="css/yasta-glass.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <div class="brand-icon">Y</div>
+        <div class="brand-title">YASTA_<span>CODING</span></div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="nav-item active" data-page="dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="keys.html" class="nav-item" data-page="keys">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-1-1l-3 3m1 1l-2 2m-1-1l-2 2m-1-1l-3 3a5 5 0 0 1-7-7l9-9a5 5 0 0 1 7 7z"/></svg>
+          <span>License Keys</span>
+        </a>
+        <a href="manage-user.html" class="nav-item" data-page="manage-user" id="nav-users-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Manage Users</span>
+        </a>
+        <a href="logs.html" class="nav-item" data-page="logs">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <span>Audit Logs</span>
+        </a>
+        <a href="settings.html" class="nav-item" data-page="settings" id="nav-settings-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-profile-box">
+          <div class="user-info">
+            <span class="user-info-name" id="user-profile-name">Operator</span>
+            <span class="user-info-role" id="user-profile-role">Administrator</span>
+          </div>
+          <button class="btn btn-secondary btn-sm btn-icon" title="Logout" onclick="YastaApp.logout()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="app-main">
+      <header class="app-header">
+        <div class="header-left">
+          <button class="mobile-toggle" id="mobile-sidebar-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <div class="header-title">Command Center Overview</div>
+        </div>
+
+        <div class="header-right">
+          <div class="credit-counter" id="user-credit-count">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>Credits: --</span>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="window.location.href='keys.html'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span>New Key</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="content-body">
+        <!-- Quick Stats Metrics -->
+        <div class="stats-grid">
+          <div class="glass-panel stat-card glass-card-hover">
+            <div class="stat-card-header">
+              <span class="stat-label">Total Licenses</span>
+              <div class="stat-icon" style="background: rgba(0, 240, 255, 0.15); color: var(--accent-cyan);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+            </div>
+            <div class="stat-val" id="stat-total-keys">0</div>
+            <div class="stat-hint text-cyan">All registered license keys</div>
+          </div>
+
+          <div class="glass-panel stat-card glass-card-hover">
+            <div class="stat-card-header">
+              <span class="stat-label">Active Nodes</span>
+              <div class="stat-icon" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+            </div>
+            <div class="stat-val" id="stat-active-keys">0</div>
+            <div class="stat-hint text-emerald">Currently authorized clients</div>
+          </div>
+
+          <div class="glass-panel stat-card glass-card-hover">
+            <div class="stat-card-header">
+              <span class="stat-label">Banned / Expired</span>
+              <div class="stat-icon" style="background: rgba(244, 63, 94, 0.15); color: var(--accent-crimson);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+              </div>
+            </div>
+            <div class="stat-val" id="stat-banned-keys">0</div>
+            <div class="stat-hint text-crimson">Revoked or terminated access</div>
+          </div>
+
+          <div class="glass-panel stat-card glass-card-hover">
+            <div class="stat-card-header">
+              <span class="stat-label">Today's Validations</span>
+              <div class="stat-icon" style="background: rgba(168, 85, 247, 0.15); color: var(--accent-violet);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+            </div>
+            <div class="stat-val" id="stat-today-validations">0</div>
+            <div class="stat-hint text-violet">Secure hardware handshakes</div>
+          </div>
+        </div>
+
+        <!-- Middle Section: Quick Key Generator & Real-time Live Log -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 24px; margin-bottom: 28px;">
+          <!-- Quick Key Generator Card -->
+          <div class="glass-panel" style="padding: 24px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+              <h3 style="font-size: 1.15rem;">⚡ Quick Key Generator</h3>
+              <span class="badge badge-cyan">Instant Mint</span>
+            </div>
+            <p class="text-muted" style="font-size: 0.88rem; margin-bottom: 18px;">
+              Mint a single production key with standard permissions directly to the active database.
+            </p>
+
+            <form id="quick-generate-form">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label class="form-label">Duration</label>
+                  <select id="q-duration" class="form-control">
+                    <option value="1">1 Day (Test)</option>
+                    <option value="7">7 Days (Weekly)</option>
+                    <option value="30" selected>30 Days (Monthly)</option>
+                    <option value="90">90 Days (Quarterly)</option>
+                    <option value="-1">Lifetime</option>
+                  </select>
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label class="form-label">Key Prefix</label>
+                  <input type="text" id="q-prefix" class="form-control" value="YASTA" placeholder="Prefix">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Note / Client Identifier</label>
+                <input type="text" id="q-note" class="form-control" placeholder="Optional reference note">
+              </div>
+
+              <button type="submit" id="q-gen-btn" class="btn btn-primary" style="width: 100%;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <span>Generate Key</span>
+              </button>
+            </form>
+
+            <div id="quick-result" style="display: none; margin-top: 18px; padding: 14px; background: rgba(0, 240, 255, 0.08); border: 1px solid rgba(0, 240, 255, 0.3); border-radius: var(--glass-radius-sm);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--accent-cyan); font-weight: 700;">Generated Key</span>
+                <button class="btn btn-secondary btn-sm" id="copy-quick-key-btn">Copy</button>
+              </div>
+              <div class="mono" id="quick-key-display" style="font-size: 1rem; color: #fff; word-break: break-all;"></div>
+            </div>
+          </div>
+
+          <!-- Live Activity Stream -->
+          <div class="glass-panel" style="padding: 24px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+              <h3 style="font-size: 1.15rem;">Live Activity Stream</h3>
+              <a href="logs.html" class="text-cyan" style="font-size: 0.85rem;">Full Audit Trail &rarr;</a>
+            </div>
+
+            <div class="table-responsive">
+              <table class="yasta-table">
+                <thead>
+                  <tr>
+                    <th>Action</th>
+                    <th>Actor</th>
+                    <th>Time</th>
+                  </tr>
+                </thead>
+                <tbody id="recent-logs-table-body">
+                  <tr>
+                    <td colspan="3" style="text-align: center; color: var(--text-dim); padding: 24px;">
+                      Querying security stream...
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
