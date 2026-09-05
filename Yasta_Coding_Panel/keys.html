@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>License Keys — Yasta_Coding Panel</title>
+  <link rel="stylesheet" href="css/yasta-glass.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <div class="brand-icon">Y</div>
+        <div class="brand-title">YASTA_<span>CODING</span></div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="nav-item" data-page="dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="keys.html" class="nav-item active" data-page="keys">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-1-1l-3 3m1 1l-2 2m-1-1l-2 2m-1-1l-3 3a5 5 0 0 1-7-7l9-9a5 5 0 0 1 7 7z"/></svg>
+          <span>License Keys</span>
+        </a>
+        <a href="manage-user.html" class="nav-item" data-page="manage-user" id="nav-users-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Manage Users</span>
+        </a>
+        <a href="logs.html" class="nav-item" data-page="logs">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <span>Audit Logs</span>
+        </a>
+        <a href="settings.html" class="nav-item" data-page="settings" id="nav-settings-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-profile-box">
+          <div class="user-info">
+            <span class="user-info-name" id="user-profile-name">Operator</span>
+            <span class="user-info-role" id="user-profile-role">Administrator</span>
+          </div>
+          <button class="btn btn-secondary btn-sm btn-icon" title="Logout" onclick="YastaApp.logout()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="app-main">
+      <header class="app-header">
+        <div class="header-left">
+          <button class="mobile-toggle" id="mobile-sidebar-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <div class="header-title">License Management Hub</div>
+        </div>
+
+        <div class="header-right">
+          <button class="btn btn-secondary btn-sm" id="export-keys-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <span>Export Keys</span>
+          </button>
+          <button class="btn btn-primary btn-sm" id="open-gen-modal-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span>Generate Keys</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="content-body">
+        <!-- Toolbar & Filter Panel -->
+        <div class="glass-panel" style="padding: 18px 24px; margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;">
+          <div style="display: flex; gap: 12px; flex: 1; min-width: 280px; max-width: 500px;">
+            <input type="text" id="search-input" class="form-control" placeholder="Search by key, note, or HWID...">
+          </div>
+
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <select id="status-filter" class="form-control" style="width: 150px;">
+              <option value="all">All Statuses</option>
+              <option value="active">Active</option>
+              <option value="unused">Unused</option>
+              <option value="expired">Expired</option>
+              <option value="banned">Banned</option>
+            </select>
+
+            <button class="btn btn-secondary btn-sm" id="refresh-keys-btn" title="Refresh Table">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- License Keys Table -->
+        <div class="glass-panel" style="padding: 0; overflow: hidden;">
+          <div class="table-responsive">
+            <table class="yasta-table">
+              <thead>
+                <tr>
+                  <th>License Key</th>
+                  <th>Duration</th>
+                  <th>Expiration</th>
+                  <th>Bound HWID / Limit</th>
+                  <th>Status</th>
+                  <th>Attached Links</th>
+                  <th style="text-align: right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="keys-table-body">
+                <tr>
+                  <td colspan="7" style="text-align: center; color: var(--text-dim); padding: 36px;">
+                    Loading license database...
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Generate Keys Modal -->
+  <div class="modal-backdrop" id="gen-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Batch License Generation</h3>
+        <button class="modal-close" onclick="YastaApp.closeModal('gen-modal')">&times;</button>
+      </div>
+      <form id="gen-modal-form">
+        <div class="modal-body">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label class="form-label">Quantity</label>
+              <input type="number" id="modal-gen-count" class="form-control" value="1" min="1" max="100" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Prefix</label>
+              <input type="text" id="modal-gen-prefix" class="form-control" value="YASTA" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label class="form-label">Duration</label>
+              <select id="modal-gen-duration" class="form-control">
+                <option value="1">1 Day</option>
+                <option value="7">7 Days</option>
+                <option value="30" selected>30 Days</option>
+                <option value="60">60 Days</option>
+                <option value="90">90 Days</option>
+                <option value="365">365 Days (1 Year)</option>
+                <option value="-1">Lifetime</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Max Devices</label>
+              <input type="number" id="modal-gen-devices" class="form-control" value="1" min="1" max="10" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Reference Note</label>
+            <input type="text" id="modal-gen-note" class="form-control" placeholder="Client, Discord tag, or order ID">
+          </div>
+
+          <div style="margin-top: 14px; margin-bottom: 12px; font-weight: 700; font-size: 0.85rem; color: var(--accent-cyan);">
+            Client Download Attachments (Optional Overrides)
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Mod APK / App URL (`modUrl`)</label>
+            <input type="url" id="modal-gen-mod-url" class="form-control" placeholder="https://...">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Original App URL (`origUrl`)</label>
+            <input type="url" id="modal-gen-orig-url" class="form-control" placeholder="https://...">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label class="form-label">Original Folders ZIP URL</label>
+              <input type="url" id="modal-gen-orig-zip" class="form-control" placeholder="https://...">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Custom Folders ZIP URL</label>
+              <input type="url" id="modal-gen-custom-zip" class="form-control" placeholder="https://...">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="YastaApp.closeModal('gen-modal')">Cancel</button>
+          <button type="submit" id="gen-modal-submit" class="btn btn-primary">Generate Keys</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Link Attachments Modal -->
+  <div class="modal-backdrop" id="links-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Configure Key Link Attachments</h3>
+        <button class="modal-close" onclick="YastaApp.closeModal('links-modal')">&times;</button>
+      </div>
+      <form id="links-modal-form">
+        <div class="modal-body">
+          <input type="hidden" id="links-key-id">
+          <div style="margin-bottom: 16px;">
+            <span class="text-muted" style="font-size: 0.85rem;">Target Key:</span>
+            <span class="key-code" id="links-key-display"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Mod URL (`modUrl`)</label>
+            <input type="url" id="edit-modUrl" class="form-control" placeholder="Direct download URL for modified payload">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Orig URL (`origUrl`)</label>
+            <input type="url" id="edit-origUrl" class="form-control" placeholder="URL for original package">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Original Folders ZIP URL (`originalFoldersZipUrl`)</label>
+            <input type="url" id="edit-originalFoldersZipUrl" class="form-control" placeholder="ZIP resource archive">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Custom Folders ZIP URL (`customFoldersZipUrl`)</label>
+            <input type="url" id="edit-customFoldersZipUrl" class="form-control" placeholder="ZIP custom mod resource archive">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="YastaApp.closeModal('links-modal')">Close</button>
+          <button type="submit" class="btn btn-primary">Save Attachments</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Export Keys Modal -->
+  <div class="modal-backdrop" id="export-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Export Keys</h3>
+        <button class="modal-close" onclick="YastaApp.closeModal('export-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted" style="margin-bottom: 20px; font-size: 0.9rem;">
+          Select format to download or copy the active filtered set of keys.
+        </p>
+        <div style="display: flex; gap: 14px;">
+          <button class="btn btn-secondary" style="flex: 1;" onclick="exportCurrentKeys('txt')">TXT (Raw Keys)</button>
+          <button class="btn btn-secondary" style="flex: 1;" onclick="exportCurrentKeys('csv')">CSV Table</button>
+          <button class="btn btn-secondary" style="flex: 1;" onclick="exportCurrentKeys('json')">JSON Data</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/keys.js"></script>
+</body>
+</html>
